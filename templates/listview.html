@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+{% load hitcount_tags %}
+
+<title>{{cons.title}}</title>
+<meta name="keywords" content="帝国cms" />
+<meta name="description" content="帝国cms关键词和tags标签自动同步方法" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/static/css/base.css" rel="stylesheet">
+<link href="/static/css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<script src="js/modernizr.js"></script>
+<![endif]-->
+</head>
+<body>
+<script>
+window.onload = function ()
+{
+	var oH2 = document.getElementsByTagName("h2")[0];
+	var oUl = document.getElementsByTagName("ul")[0];
+	oH2.onclick = function ()
+	{
+		var style = oUl.style;
+		style.display = style.display == "block" ? "none" : "block";
+		oH2.className = style.display == "block" ? "open" : ""
+	}
+}
+</script>
+<header>
+  <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="/index/">首页</a></li>
+      <li><a href="/about.html">关于我</a></li>
+      <li><a href="/jstt/">在途之路</a></li>
+      <li><a href="/news/">精简生活</a></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/index/">首页</a></li>
+      <li><a href="/about.html">关于我</a></li>
+      <li><a href="/jstt/">在途之路</a></li>
+      <li><a href="/news/">精简生活</a></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </nav>
+</header>
+<article>
+  <div class="leftbox">
+    <div class="infos">
+      <div class="newsview">
+        <h2 class="intitle">您现在的位置是：<a href="/">首页</a>&nbsp;>&nbsp;<a href="/jstt/">{{cons.fenlei.title}}</a>&nbsp;
+        <h3 class="news_title">{{cons.title}}</h3>
+        <div class="news_author"><span class="au01"></span><span class="au02">2018-03-20</span><span class="au03">共<b><script src=js/95340d73463e48a3ae4ff6f0815da9cf.js></script></b>{{cons.views}}人围观</span></div>
+        <div class="tags"><a href="/e/tags/?tagname=%B5%DB%B9%FA+&tempid=13" target="_blank">{{cons.fenlei.title}} </a></div>
+        <hr/>
+        <div class="news_infos">
+         {{cons.article| safe}}
+
+        </div>
+      </div>
+      <!--
+      <div class="share">分享：</div>
+
+    </div>
+    <div class="nextinfo">
+      <p>上一篇：<a href='/jstt/web/2018-03-07/802.html'>野草云怎么样？香港CN2 VPS，美国CERA VPS，香港虚拟主机</a></p>
+      <p>下一篇：<a href='/jstt/web/'>返回列表</a></a></p>
+    </div>
+    <div class="otherlink">
+      <h2>相关文章</h2>
+      <ul>
+   <li><a href="/news/life/2018-03-04/801.html" title="帝国cms7.5更新完毕">帝国cms7.5更新完毕</a></li><li><a href="/jstt/web/2015-07-03/749.html" title="帝国cms首页、自定义页面如何实现分页">帝国cms首页、自定义页面如何实现分页</a></li><li><a href="/jstt/bj/2014-10-18/731.html" title="帝国cms常用标签调用方法总结（不得不收藏哦）">帝国cms常用标签调用方法总结（不得不收藏哦）</a></li><li><a href="/jstt/bj/2013-08-06/570.html" title="帝国cms怎样修改列表分页函数">帝国cms怎样修改列表分页函数</a></li>      </ul>
+    </div>
+    <div class="news_pl">
+      <h2>文章评论</h2>
+      <ul>
+      --
+<div class="gbko">
+<!--高速版-->
+<div id="SOHUCS" sid="809" ></div>
+<script charset="utf-8" type="text/javascript" src="js/changyan.js" ></script>
+<script type="text/javascript">
+window.changyan.api.config({
+appid: 'cyt6UkrdY',
+conf: 'prod_37667ae67efaadf448cac07713d3165a'
+});
+</script>
+</div>
+      </ul>
+    </div>
+  </div>
+  <div class="rightbox">
+    <!--
+    <div class="search">
+      <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+        <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字" style="color: rgb(153, 153, 153);" onfocus="if(value=='请输入关键字'){this.style.color='#000';value=''}" onblur="if(value==''){this.style.color='#999';value='请输入关键字'}" type="text">
+        <input name="show" value="title" type="hidden">
+        <input name="tempid" value="1" type="hidden">
+        <input name="tbname" value="news" type="hidden">
+        <input name="Submit" class="input_submit" value="搜索" type="submit">
+      </form>
+    </div>
+
+    <div class="paihang">
+      <h2 class="ab_title"><a href="/">本栏推荐</a></h2>
+      <ul>
+        <li><b><a href="/jstt/web/2014-01-18/644.html" target="_blank">我的个人博客之――阿里云空间选择30...</a></b>
+          <p>之前服务器放在电信机房， 联通用户访问速度很不稳定，经常出现访问速度慢的问题，换到阿里云解决了之前的...</p>
+        </li>
+      </ul>
+      <div class="ad"><img src="picture/ad300x100.jpg"></div>
+    </div>
+    -->
+    <div class="paihang">
+      <h2 class="ab_title"><a href="/">点击排行</a></h2>
+      <ul>
+        {% for i in see%}
+          <li><b><a href="/detail-{{i.id}}/" target="_blank">{{i.title}}</a></b>
+            <a href="/detail-{{i.id}}/"><p class="p11">{{i.article}}</p></a>
+          </li>
+        {% endfor %}
+      </ul>
+      <div class="ad"><img src="picture/ad01.jpg"></div>
+    </div>
+    <div class="weixin">
+      <h2 class="ab_title">官方微信</h2>
+      <ul>
+        <img src="picture/wx.jpg">
+      </ul>
+    </div>
+  </div>
+</article>
+<footer>
+  <p>Design by <a href="http://www.yangqq.com">杨青个人博客</a> <a href="/">蜀ICP备11002373号-1</a></p>
+</footer><script src="js/61a9ee23bfbe484da195456aea8b6f8b.js"></script></body>
+</html>

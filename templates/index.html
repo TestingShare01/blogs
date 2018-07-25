@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>TestingShare</title>
+{% load hitcount_tags %}
+
+<meta name="keywords" content="个人博客,杨青个人博客,个人博客模板,杨青" />
+<meta name="description" content="杨青个人博客，是一个站在web前端设计之路的女程序员个人网站，提供个人博客模板免费资源下载的个人原创网站。" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/static/css/base.css" rel="stylesheet">
+<link href="/static/css/index.css" rel="stylesheet">
+<!--[if lt IE 9]>
+<![endif]-->
+</head>
+<body>
+<script>
+  function cons(){
+    var con = document.getElementsById("p12");
+    var ll = "";
+    for(var i=0;i<99;i++){
+      ll = ll+con[i];
+    }
+    con.innetText = ll;
+  }
+cons()
+</script>
+<header>
+  <div id="mnav">
+    <h2><span class="navicon"></span></h2>
+    <ul>
+      <li><a href="/index/">首页</a></li>
+      <li><a href="/about.html">关于我</a></li>
+       <li><a href="/jstt/">在途之路</a></li>
+      <li><a href="/news/">精简生活</a></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/index/">首页</a></li>
+      <li><a href="/about.html">关于我</a></li>
+      <li><a href="/jstt/">在途之路</a></li>
+      <li><a href="/news/">精简生活</a></li>
+      <li><a href="/e/tool/gbook/?bid=3">留言</a></li>
+    </ul>
+  </nav>
+</header>
+<article>
+  <div class="pics">
+    <ul>
+      {% for i in headd%}
+      <li><a href="/jstt/bj/2015-01-09/740.html" target="_blank"><img src={{i.lianjie}} height="155" width="320"></a><span>{{i.artice}}</span></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="sleftbox">
+
+    <div class="newblogs">
+      <h2 class="hometitle">最新文章</h2>
+      <ul>
+       
+
+        {% for i in con%}
+        <li>
+          <h3 class="blogtitle"><a href="/detail-{{i.id}}/" target="_blank" >{{i.title}}</a></h3>
+          <div class="bloginfo"><span class="blogpic"><a href="/detail-{{i.id}}/" title={{i.title}}><img src="picture/393d21b65031dd0d85eb2e5789a97b1e.jpg" alt="别让这些闹心的套路，毁了你的网页设计" /></a></span>
+            <p class="p11 p12">{{i.article | truncatechars:200}}}</p>
+          </div>
+          <div class="autor"><span class="lm f_l"><a href="/jstt/css3/" title={{i.fenlei}} target="_blank"  class="classname">{{i.fenlei.title}}</a></span><span class="dtime f_l">{{i.start_time}}</span><span class="viewnum f_l">浏览（<a href="/">{{i.views}}</a>）</span><span class="f_r"><a href="/detail-{{i.id}}/" class="more">阅读原文>></a></span></div>
+        </li>
+
+        {% endfor %}
+
+      </ul>
+    </div>
+  </div>
+  <div class="srightbox">
+    <div class="aboutme">
+      <h2 class="ab_title">关于我</h2>
+      <div class="avatar"><img src="picture/b04.jpg" /></div>
+      <div class="ab_con">
+        <p>网名：TestingShare </p>
+        <p>职业：软件测试 </p>
+        <p>个人微信：没人看就不放了</p>
+        <p>邮箱：360034365@163.com</p>
+      </div>
+    </div>
+
+    <div class="search">
+      <div>
+        <ul style="">
+          {% for i in fenlei%}
+          <a href="/fenlist-{{i.uid}}-1" title="10个话题" style="color:#20cc46;font-size:21.294pt;" target="_blank" rel="nofollow">{{i.title}}</a>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="paihang">
+      <h2 class="ab_title"><a href="/">点击排行</a></h2>
+      <ul>
+        {% for i in see_sum%}
+        <li><b><a href="/detail-{{i.id}}/" target="_blank">{{i.title}}</a></b>
+          <a href="/detail-{{i.id}}/"><p class="p11">{{i.article}}</p></a>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="ad"><img src="picture/ad300x100.jpg"></div>
+    </div>
+    <!--
+<div class="paihang">
+      <h2 class="ab_title"><a href="/">站长推荐</a></h2>
+      <ul>
+        <li><b><a href="/jstt/css3/2018-03-20/808.html" target="_blank">十条设计原则教你学会如何设计网页布局!30...</a></b>
+          <p>网页常见的布局有很多种,单列布局,多列布局.其中单列布局是国外很多网站比较常用的.咱们很多站长以及门户...</p>
+        </li>
+        <li><b><a href="/download/div/2018-03-18/807.html" target="_blank">html5个人博客模板主题《绅士》30...</a></b>
+          <p>因其颜色主要是黑白搭配,重点突出的是文字内容,就像是一个颇有内涵的绅士.所以此模板主题为《绅士》,个人...</p>
+        </li>
+        <li><b><a href="/jstt/css3/2018-03-14/806.html" target="_blank">用js+css3来写一个手机栏目导航30...</a></b>
+          <p>有些站长说想做一个手机适应的网站,但是导航太难了,如果要使用框架的话,代码非常多,冗余.再用dreamwear打...</p>
+        </li>
+        <li><b><a href="/jstt/css3/2018-03-14/805.html" target="_blank">6条网页设计配色原则,让你秒变配色高手30...</a></b>
+          <p>网页设计好不好看,颜色是毋庸置疑要排首位的,所以关于颜色的搭配技巧以及原则,对于每一个要学习web前端设...</p>
+        </li>
+        <li><b><a href="/news/life/2018-03-13/804.html" target="_blank">作为一个设计师,如果遭到质疑你是否能恪守自己的原则?30...</a></b>
+          <p>就拿我自己来说吧，有时候会很矛盾，设计好的作品，不把它分享出来，会觉得待在自己电脑里面实在是没有意...</p>
+        </li>
+        <li><b><a href="/news/life/2018-03-12/803.html" target="_blank">Come on,行动起来吧!我们和时间来一场赛跑!30...</a></b>
+          <p>时间过得那么飞快,使我的小心眼儿里不只是着急,还有悲伤.有一天,我放学回家,看到太阳快落山了,就下决心说...</p>
+        </li>
+      </ul>
+      <div class="ad"><img src="picture/ad01.jpg"></div>
+    </div>
+    <div class="links">
+      <h2 class="ab_title">友情链接</h2>
+      <ul>
+        <li><a href="http://www.yangqq.com">杨青个人博客</a></li>
+        <li><a href="http://www.yangqq.com/download/">个人博客模板</a></li>
+        <li><a href="http://www.yangqq.com/link.html">优秀个人博客</a></li>
+      </ul>
+    </div>
+    -->
+    <div class="weixin">
+      <h2 class="ab_title">官方微信</h2>
+      <ul>
+        <img src="picture/wx.jpg">
+      </ul>
+    </div>
+  </div>
+</article>
+<footer>
+  <p>Design by <a href="http://www.yangqq.com">TestingShare</a> <a href="/">蜀ICP备11002373</a></p>
+</footer>
+</body>
+</html>
